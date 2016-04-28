@@ -1,11 +1,13 @@
 <resources>
     <string name="app_name">TwoRoundedCornerTransformation</string>
+    <string name="normal_rounded_corner_image">Normal Rounded Corner Image</string>
     <string name="top_rounded_corner_image">Top Rounded Corner Image</string>
     <string name="right_rounded_corner_image">Right Rounded Corner Image</string>
     <string name="bottom_rounded_corner_image">Bottom Rounded Corner Image</string>
     <string name="left_rounded_corner_image">Left Rounded Corner Image</string>
     <string name="compose_image">Compose Image</string>
 
+    <string name="normal">Normal</string>
     <string name="top">Top</string>
     <string name="right">Right</string>
     <string name="bottom">Bottom</string>

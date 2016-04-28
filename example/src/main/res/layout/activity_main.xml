@@ -20,6 +20,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
+                android:text="@string/normal"/>
+
+            <ImageView
+                android:id="@+id/normal_rounded_corner_image_view"
+                android:layout_width="@dimen/sample_image_size"
+                android:layout_height="@dimen/sample_image_size"
+                android:layout_marginTop="@dimen/primary_half"
+                android:contentDescription="@string/normal_rounded_corner_image"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/primary_double"
+                android:gravity="center_horizontal"
                 android:text="@string/top"/>
 
             <ImageView
