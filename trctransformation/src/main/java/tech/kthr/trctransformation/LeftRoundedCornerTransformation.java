@@ -12,7 +12,7 @@ import com.squareup.picasso.Transformation;
 
 public class LeftRoundedCornerTransformation implements Transformation {
     private final int radius;
-    private final int margin;  // dp
+    private final int margin;
 
     public LeftRoundedCornerTransformation(final int radius, final int margin) {
         this.radius = radius;

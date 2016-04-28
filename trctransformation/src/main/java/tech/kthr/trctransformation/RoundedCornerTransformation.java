@@ -8,11 +8,11 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.graphics.Shader;
 
-public class AllRoundedCornerTransformation implements com.squareup.picasso.Transformation {
+public class RoundedCornerTransformation implements com.squareup.picasso.Transformation {
     private final int radius;
-    private final int margin;  // dp
+    private final int margin;
 
-    public AllRoundedCornerTransformation(final int radius, final int margin) {
+    public RoundedCornerTransformation(final int radius, final int margin) {
         this.radius = radius;
         this.margin = margin;
     }
