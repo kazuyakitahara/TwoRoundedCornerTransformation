@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="tech.kthr.example.trctransformation.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/primary_double">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/top"/>
+
+            <ImageView
+                android:id="@+id/top_rounded_corner_image_view"
+                android:layout_width="@dimen/sample_image_size"
+                android:layout_height="@dimen/sample_image_size"
+                android:layout_marginTop="@dimen/primary_half"
+                android:contentDescription="@string/top_rounded_corner_image"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/primary_double"
+                android:gravity="center_horizontal"
+                android:text="@string/right"/>
+
+            <ImageView
+                android:id="@+id/right_rounded_corner_image_view"
+                android:layout_width="@dimen/sample_image_size"
+                android:layout_height="@dimen/sample_image_size"
+                android:layout_marginTop="@dimen/primary_half"
+                android:contentDescription="@string/right_rounded_corner_image"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/primary_double"
+                android:gravity="center_horizontal"
+                android:text="@string/bottom"/>
+
+            <ImageView
+                android:id="@+id/bottom_rounded_corner_image_view"
+                android:layout_width="@dimen/sample_image_size"
+                android:layout_height="@dimen/sample_image_size"
+                android:layout_marginTop="@dimen/primary_half"
+                android:contentDescription="@string/bottom_rounded_corner_image"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/primary_double"
+                android:gravity="center_horizontal"
+                android:text="@string/left"/>
+
+            <ImageView
+                android:id="@+id/left_rounded_corner_image_view"
+                android:layout_width="@dimen/sample_image_size"
+                android:layout_height="@dimen/sample_image_size"
+                android:layout_marginTop="@dimen/primary_half"
+                android:contentDescription="@string/left_rounded_corner_image"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/primary_double"
+                android:gravity="center_horizontal"
+                android:text="@string/compose"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/primary_half">
+
+                <ImageView
+                    android:id="@+id/compose_image_view"
+                    android:layout_width="@dimen/sample_image_size"
+                    android:layout_height="@dimen/sample_image_size"
+                    android:contentDescription="@string/compose_image"/>
+
+                <TextView
+                    android:layout_width="@dimen/sample_image_size"
+                    android:layout_height="@dimen/compose_text_height"
+                    android:layout_below="@id/compose_image_view"
+                    android:background="@drawable/compose_text_background"
+                    android:gravity="center"
+                    android:text="@string/cat"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>
