@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TwoRoundedCornerTransformation2.iml" filepath="$PROJECT_DIR$/TwoRoundedCornerTransformation2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TwoRoundedCornerTransformation.iml" filepath="$PROJECT_DIR$/TwoRoundedCornerTransformation.iml" />
       <module fileurl="file://$PROJECT_DIR$/example/example.iml" filepath="$PROJECT_DIR$/example/example.iml" />
       <module fileurl="file://$PROJECT_DIR$/trctransformation/trctransformation.iml" filepath="$PROJECT_DIR$/trctransformation/trctransformation.iml" />
     </modules>
