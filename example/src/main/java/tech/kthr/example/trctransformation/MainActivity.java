@@ -15,12 +15,7 @@ import tech.kthr.trctransformation.TopRoundedCornerTransformation;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding = null;
-    private static final String IMAGE_URL_NORMAL = "https://www.pakutaso.com/shared/img/thumb/P1080011_TP_V.jpg";
-    private static final String IMAGE_URL_TOP = "https://www.pakutaso.com/assets_c/2016/02/KAZ7842_P1110102-thumb-autox1500-20691.jpg";
-    private static final String IMAGE_URL_RIGHT = "https://www.pakutaso.com/shared/img/thumb/PAK88_tsurareneko20150109081309_TP_V.jpg";
-    private static final String IMAGE_URL_BOTTOM = "https://www.pakutaso.com/shared/img/thumb/HIRA88_hikkurikaetteniramiwokikasu20130910001351_TP_V.jpg";
-    private static final String IMAGE_URL_LEFT = "https://www.pakutaso.com/shared/img/thumb/HIRA88_nihikisorottesc20140809134818_TP_V.jpg";
-    private static final String IMAGE_URL_COMPOSE = "https://www.pakutaso.com/assets_c/2016/03/P1090145-3-thumb-autox1000-21374.jpg";
+    private static final String PICASSO_ASSETS_PREFIX = "file:///android_asset/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,40 +26,44 @@ public class MainActivity extends AppCompatActivity {
 
     private void setSampleImages() {
         int cornerRadiusPx = getResources().getDimensionPixelSize(R.dimen.corner_radius);
-        Picasso.with(this).load("file:///android_asset/image_01.jpg")
+        Picasso.with(this).load(buildAssetPath("image_01.jpg"))
                 .fit()
                 .centerCrop()
                 .transform(new RoundedCornerTransformation(cornerRadiusPx, 0))
                 .into(this.binding.normalRoundedCornerImageView);
 
-        Picasso.with(this).load(IMAGE_URL_TOP)
+        Picasso.with(this).load(buildAssetPath("image_02.jpg"))
                 .fit()
                 .centerCrop()
                 .transform(new TopRoundedCornerTransformation(cornerRadiusPx, 0))
                 .into(this.binding.topRoundedCornerImageView);
 
-        Picasso.with(this).load(IMAGE_URL_RIGHT)
+        Picasso.with(this).load(buildAssetPath("image_03.jpg"))
                 .fit()
                 .centerCrop()
                 .transform(new RightRoundedCornerTransformation(cornerRadiusPx, 0))
                 .into(this.binding.rightRoundedCornerImageView);
 
-        Picasso.with(this).load(IMAGE_URL_BOTTOM)
+        Picasso.with(this).load(buildAssetPath("image_04.jpg"))
                 .fit()
                 .centerCrop()
                 .transform(new BottomRoundedCornerTransformation(cornerRadiusPx, 0))
                 .into(this.binding.bottomRoundedCornerImageView);
 
-        Picasso.with(this).load(IMAGE_URL_LEFT)
+        Picasso.with(this).load(buildAssetPath("image_05.jpg"))
                 .fit()
                 .centerCrop()
                 .transform(new LeftRoundedCornerTransformation(cornerRadiusPx, 0))
                 .into(this.binding.leftRoundedCornerImageView);
 
-        Picasso.with(this).load(IMAGE_URL_COMPOSE)
+        Picasso.with(this).load(buildAssetPath("image_06.jpg"))
                 .fit()
                 .centerCrop()
                 .transform(new TopRoundedCornerTransformation(cornerRadiusPx, 0))
                 .into(this.binding.composeImageView);
+    }
+
+    private String buildAssetPath(String imageName) {
+        return PICASSO_ASSETS_PREFIX + imageName;
     }
 }
