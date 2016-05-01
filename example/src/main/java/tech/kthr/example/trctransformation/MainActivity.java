@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setSampleImages() {
         int cornerRadiusPx = getResources().getDimensionPixelSize(R.dimen.corner_radius);
-        Picasso.with(this).load(IMAGE_URL_NORMAL)
+        Picasso.with(this).load("file:///android_asset/image_01.jpg")
                 .fit()
                 .centerCrop()
                 .transform(new RoundedCornerTransformation(cornerRadiusPx, 0))
