@@ -25,3 +25,16 @@ dependencies {
 
     compile 'com.squareup.picasso:picasso:2.5.2'
 }
+
+def repo = new File(rootDir, "repository")
+apply plugin: 'maven'
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository url: "file://${repo.absolutePath}"
+            pom.version = '1.0.0'
+            pom.groupId = 'tech.kthr.picasso-transformation'
+            pom.artifactId = 'two-rounded-corner'
+        }
+    }
+}
